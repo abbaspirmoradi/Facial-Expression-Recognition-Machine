@@ -1,0 +1,16 @@
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\bin\Debug\FacialExpressionRecognitionMachine.exe
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\bin\Debug\FacialExpressionRecognitionMachine.pdb
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\MainWindow.baml
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\MainWindow.g.cs
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\App.g.cs
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\FacialExpressionRecognitionMachine_MarkupCompile.cache
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\FacialExpressionRecognitionMachine.g.resources
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\FacialExpressionRecognitionMachine.Properties.Resources.resources
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\FacialExpressionRecognitionMachine.exe
+C:\Users\morvarid\Documents\Visual Studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\FacialExpressionRecognitionMachine.pdb
+C:\Users\morvarid\documents\visual studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\EmotionDetection.baml
+C:\Users\morvarid\documents\visual studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\EmotionDetection.g.cs
+C:\Users\morvarid\documents\visual studio 2010\Projects\FacialExpressionRecognitionMachine\FacialExpressionRecognitionMachine\obj\x86\Debug\smileDetection.previewForm.resources

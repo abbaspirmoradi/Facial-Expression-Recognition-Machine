@@ -1,0 +1,374 @@
+﻿<Window x:Class="FacialExpressionRecognitionMachine.EmotionDetection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="EmotionDetection"
+        Width="820"
+        Height="730"
+        FontFamily="B Mitra"
+        FontWeight="Bold"
+        ResizeMode="NoResize">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="3">
+            <Border BorderBrush="Aqua"  BorderThickness="2">
+                <Border BorderBrush="Black" BorderThickness="3">
+                    <StackPanel FlowDirection="RightToLeft" Orientation="Vertical">
+                        <StackPanel Height="200"
+                                    FlowDirection="RightToLeft"
+                                    Orientation="Horizontal">
+                            <StackPanel Width="20" />
+                            <StackPanel FlowDirection="RightToLeft" Orientation="Vertical">
+                                <Label Width="120" Height="20" />
+                                <Button Name="Convert2BinaryBtn"
+                                        Width="120"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="Convert2BinaryBtn_Click">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="تصویر دودویی" />
+                                        <Image Source="/FacialExpressionRecognitionMachine;component/Icons/depositphotos_3230706-Binary-background-matrix.Vector.png" />
+                                    </StackPanel>
+                                </Button>
+                                <Label Width="120" Height="20" />
+                                <Button Name="FaceDetectionBtn"
+                                        Width="120"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="FaceDetectionBtn_Click"
+                                        IsEnabled="False">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="تشخیص صورت" />
+                                        <Image Source="/FacialExpressionRecognitionMachine;component/Icons/unknown.png" />
+                                    </StackPanel>
+                                </Button>
+                                <Label Width="120" Height="20" />
+                                <Button Name="ComponentDetectionBtn"
+                                        Width="120"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="ComponentDetectionBtn_Click"
+                                        IsEnabled="False">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="جداسازی اجزا" />
+                                        <Image Source="/FacialExpressionRecognitionMachine;component/Icons/Separation.png" />
+                                    </StackPanel>
+                                </Button>
+                                <Label Width="120" Height="20" />
+                            </StackPanel>
+                            <Label Width="45" />
+                            <Border BorderBrush="Black" BorderThickness="3">
+                                <WindowsFormsHost Width="260">
+                                    <wf:PictureBox x:Name="InputImage"
+                                                   Width="260"
+                                                   SizeMode="StretchImage" />
+                                </WindowsFormsHost>
+                            </Border>
+                            <Label Width="45" />
+                            <Border BorderBrush="Aqua" BorderThickness="3">
+                                <WindowsFormsHost Width="260">
+                                    <wf:PictureBox x:Name="ConvertedImage"
+                                                   Width="260"
+                                                   SizeMode="StretchImage" />
+                                </WindowsFormsHost>
+                            </Border>
+                        </StackPanel>
+                        <Label Height="20" />
+                        <StackPanel Height="150"
+                                    FlowDirection="RightToLeft"
+                                    Orientation="Horizontal">
+                            <StackPanel Width="1"
+                                        FlowDirection="RightToLeft"
+                                        Orientation="Vertical" />
+
+                            <StackPanel Width="190"
+                                        FlowDirection="RightToLeft"
+                                        Orientation="Vertical">
+                                <StackPanel Height="120"
+                                            FlowDirection="RightToLeft"
+                                            Orientation="Horizontal">
+                                    <Border BorderBrush="Black" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="LEyeInputImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                    <Border BorderBrush="Aqua" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="LEyeConvertedImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                </StackPanel>
+                                <Button Name="LEyePBtn"
+                                        Width="120"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="LEyePBtn_Click"
+                                        IsEnabled="False">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="پردازش چشم چپ" />
+                                        <Image Source="/FacialExpressionRecognitionMachine;component/Icons/eye-icon.png" />
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <Label Width="10" />
+                            <StackPanel Width="190"
+                                        FlowDirection="RightToLeft"
+                                        Orientation="Vertical">
+                                <StackPanel Height="120"
+                                            FlowDirection="RightToLeft"
+                                            Orientation="Horizontal">
+                                    <Border BorderBrush="Black" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="REyeInputImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                    <Border BorderBrush="Aqua" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="REyeConvertedImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                </StackPanel>
+                                <Button Name="REyePBtn"
+                                        Width="125"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="REyePBtn_Click"
+                                        IsEnabled="False">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="پردازش چشم راست" />
+                                        <Image Source="/FacialExpressionRecognitionMachine;component/Icons/Purple_Eye.png" />
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <Label Width="10" />
+                            <StackPanel Width="190"
+                                        FlowDirection="RightToLeft"
+                                        Orientation="Vertical">
+                                <StackPanel Height="120"
+                                            FlowDirection="RightToLeft"
+                                            Orientation="Horizontal">
+                                    <Border BorderBrush="Black" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="MouthInputImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                    <Border BorderBrush="Aqua" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="MouthConvertedImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                </StackPanel>
+                                <Button Name="MouthPBtn"
+                                        Width="120"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="MouthPBtn_Click"
+                                        IsEnabled="False">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="پردازش دهان" />
+                                        <Image Source="/FacialExpressionRecognitionMachine;component/Icons/Mouth.png" />
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <Label Width="10" />
+                            <StackPanel Width="190"
+                                        FlowDirection="RightToLeft"
+                                        Orientation="Vertical">
+                                <StackPanel Height="120"
+                                            FlowDirection="RightToLeft"
+                                            Orientation="Horizontal">
+                                    <Border BorderBrush="Black" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="NoseInputImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                    <Border BorderBrush="Aqua" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="NoseConvertedImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                </StackPanel>
+                                <Button Name="NosePBtn"
+                                        Width="120"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="NosePBtn_Click"
+                                        IsEnabled="False">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="پردازش بینی" />
+                                        <Image Height="20" Source="/FacialExpressionRecognitionMachine;component/Icons/Nose.png" />
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel FlowDirection="RightToLeft" Orientation="Horizontal">
+                            <Label Width="200" />
+                            <StackPanel Width="190"
+                                        FlowDirection="RightToLeft"
+                                        Orientation="Vertical">
+                                <StackPanel Height="120"
+                                            FlowDirection="RightToLeft"
+                                            Orientation="Horizontal">
+                                    <Border BorderBrush="Black" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="LAbruInputImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                    <Border BorderBrush="Aqua" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="LAbruConvertedImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                </StackPanel>
+                                <Button Name="LAbruPBtn"
+                                        Width="125"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="LAbruPBtn_Click"
+                                        IsEnabled="False">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="پردازش ابروی چپ" />
+                                        <Image Source="/FacialExpressionRecognitionMachine;component/Icons/Rebruwe.png" />
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <Label Width="20" />
+                            <StackPanel Width="190"
+                                        FlowDirection="RightToLeft"
+                                        Orientation="Vertical">
+                                <StackPanel Height="120"
+                                            FlowDirection="RightToLeft"
+                                            Orientation="Horizontal">
+                                    <Border BorderBrush="Black" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="RAbruInputImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                    <Border BorderBrush="Aqua" BorderThickness="3">
+                                        <WindowsFormsHost Width="90" Height="100">
+                                            <wf:PictureBox x:Name="RAbruConvertedImage"
+                                                           Width="90"
+                                                           Height="100"
+                                                           SizeMode="StretchImage" />
+                                        </WindowsFormsHost>
+                                    </Border>
+                                </StackPanel>
+                                <Button Name="RAbruPBtn"
+                                        Width="130"
+                                        Height="30"
+                                        BorderBrush="Red"
+                                        Click="RAbruPBtn_Click"
+                                        IsEnabled="False">
+                                    <StackPanel Height="25" Orientation="Horizontal">
+                                        <Label Content="پردازش ابروی راست" />
+                                        <Image Source="/FacialExpressionRecognitionMachine;component/Icons/Browbarsl.png" />
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+
+                        </StackPanel>
+                        <StackPanel Height="100"
+                                    FlowDirection="RightToLeft"
+                                    Orientation="Horizontal">
+                            <Label Width="150" />
+                            <Label Height="25" Content=" نام شخص :" />
+
+
+                            <TextBox Name="textBox2"
+                                     Width="200"
+                                     Height="25"
+                                     BorderBrush="Red"
+                                     IsEnabled="False"
+                                     MouseEnter="textBox2_MouseEnter" />
+                            <Label Width="50" />
+                            <Button Name="ExpresionDetectionBtn"
+                                    Width="150"
+                                    Height="38"
+                                    BorderBrush="Red"
+                                    Click="ExpresionDetectionBtn_Click"
+                                    IsEnabled="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="تشخیص حالت چهره" />
+                                    <Image Source="/FacialExpressionRecognitionMachine;component/Icons/Final.png" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Height="80"
+                                    FlowDirection="RightToLeft"
+                                    Orientation="Horizontal">
+                            <Label Width="40" />
+                            <Label Height="25" Content=" نام شخص :" />
+
+                            <TextBox Name="textBox1"
+                                     Width="200"
+                                     Height="25"
+                                     BorderBrush="Red"
+                                     IsEnabled="False"
+                                     MouseEnter="textBox1_MouseEnter" />
+                            <Label Width="40" />
+                            <Label Height="25" Content=" حالت چهره واقعی :" />
+                            <ComboBox Name="comboBox1"
+                                      Width="200"
+                                      Height="25"
+                                      BorderBrush="Red"
+                                      DropDownClosed="comboBox1_DropDownClosed"
+                                      IsEnabled="False">
+                                <ComboBoxItem Content="عادی" />
+                                <ComboBoxItem Content="شاد" />
+                                <ComboBoxItem Content="ترسیده" />
+                                <ComboBoxItem Content="عصبانی" />
+                                <ComboBoxItem Content="سورپرایز" />
+                                <ComboBoxItem Content="متنفر" />
+
+                            </ComboBox>
+                            <Label Width="30" />
+                            <Button Name="Save"
+                                    Width="100"
+                                    Height="30"
+                                    BorderBrush="Red"
+                                    Click="Save_Click"
+                                    IsEnabled="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="ذخیره" />
+                                    <Image Source="/FacialExpressionRecognitionMachine;component/Icons/Save.png" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Border>
+        </Border>
+    </Grid>
+</Window>

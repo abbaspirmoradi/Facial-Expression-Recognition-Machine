@@ -1,0 +1,264 @@
+﻿<Window x:Class="FacialExpressionRecognitionMachine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="نرم افزار تشخیص حالات چهره انسان"
+        Width="770"
+        Height="570"
+               WindowStyle="None"
+        FontFamily="B Mitra"
+        FontWeight="Bold"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <ContextMenu x:Key="MyContextMenu">
+            <MenuItem Header="Send" />
+        </ContextMenu>
+    </Window.Resources>
+    <Border BorderBrush="Black" CornerRadius="2,2,0,0" BorderThickness="4">
+        <Border BorderBrush="Aqua" CornerRadius="2,2,0,0" BorderThickness="5">
+            <Border BorderBrush="Black" CornerRadius="2,2,0,0"  BorderThickness="4">
+                <Grid>
+
+
+
+                    <StackPanel FlowDirection="RightToLeft" Orientation="Vertical">
+                            <Button Width="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" Height="20" Click="Button_Click">
+                                <Image Source="/FacialExpressionRecognitionMachine;component/Icons/Delete-icon.png"  />
+                            </Button>
+
+                        <StackPanel Height="300"
+                                    FlowDirection="RightToLeft"
+                                    Orientation="Horizontal">
+                            <StackPanel Width="10" />
+                            <Border BorderBrush="Black"
+                                    BorderThickness="1"
+                                    CornerRadius="10,10,10,10">
+                                <Border BorderBrush="Aqua"
+                                    BorderThickness="2"
+                                    CornerRadius="10,10,10,10">
+                                    <Border BorderBrush="Black"
+                                    BorderThickness="1"
+                                    CornerRadius="10,10,10,10">
+                                        <WindowsFormsHost  Width="350" Height="290">
+                                    <wf:PictureBox x:Name="InputImage"
+                                                   Width="350"
+                                                   Height="290"
+                                                   SizeMode="StretchImage" />
+                                </WindowsFormsHost>
+                                    </Border>
+                                </Border>
+
+                            </Border>
+                            <!--  <Image Name="InputImage" Height="300" Width="350" />  -->
+                            <Label Width="10" />
+                            <Border BorderBrush="Black"
+                                    BorderThickness="1"
+                                    CornerRadius="10,10,10,10">
+                                <Border BorderBrush="Aqua"
+                                    BorderThickness="2"
+                                    CornerRadius="10,10,10,10">
+                                <Border BorderBrush="Black"
+                                    BorderThickness="1"
+                                    CornerRadius="10,10,10,10">
+                                <WindowsFormsHost Width="350" Height="290">
+                                    <wf:PictureBox x:Name="ConvertedImage"
+                                                   Width="350"
+                                                   Height="290"
+                                                   SizeMode="StretchImage" />
+                                </WindowsFormsHost>
+                                    </Border>
+                                </Border>
+
+                            </Border>
+                            <!--  <Image Name="ConvertedImage" Height="300" Width="350" />  -->
+                        </StackPanel>
+                        <StackPanel Height="50"
+                                    FlowDirection="RightToLeft"
+                                    Orientation="Horizontal">
+                            <Label Width="35" />
+                            <Button Name="BrowseBtn"
+                                    Width="100"
+                                    Height="30"
+                                    Click="BrowseBtn_Click">
+                                <StackPanel Height="25" Orientation="Horizontal">
+                                    <Label Content="جستجو" />
+                                    <Image Source="/FacialExpressionRecognitionMachine;component/Icons/search-icon-512.png"  />
+                                </StackPanel>
+                            </Button>
+                            <Label Width="45" />
+
+                            <Button Name="EditBtn"
+                                    Width="100"
+                                    Height="30"
+                                    BorderBrush="Red"
+                                    BorderThickness="110"
+                                    Click="EditBtn_Click"
+                                    IsEnabled="False">
+                                <StackPanel Height="25" Orientation="Horizontal">
+                                    <Label Content="ویرایش" />
+                                    <Image Source="/FacialExpressionRecognitionMachine;component/Icons/old_openofficeorg_writer.png" />
+                                </StackPanel>
+                            </Button>
+                            <!--
+                                <WindowsFormsHost Width="350"
+                                Height="290"
+                                >
+                                <wf:ContextMenuStrip x:Name="ContextMenuStrip01"
+                                Width="350"
+                                Height="290" />
+                                </WindowsFormsHost>
+                            -->
+                            <Label Width="45" />
+                            <Button Name="SkinColorBtn"
+                                    Width="100"
+                                    Height="30"
+                                    BorderBrush="Red"
+                                    BorderThickness="110"
+                                    Click="SkinColorBtn_Click"
+                                    IsEnabled="False">
+                                <StackPanel Height="25" Orientation="Horizontal">
+                                    <Label Content="رنگ صورت" />
+                                    <Image Source="/FacialExpressionRecognitionMachine;component/Icons/nanosuit_color_find_shadow.png" />
+                                </StackPanel>
+                            </Button>
+                            <Label Width="45" />
+                            <Button Name="DetectBtn"
+                                    Width="100"
+                                    Height="30"
+                                    BorderBrush="Red"
+                                    BorderThickness="110"
+                                    Click="DetectBtn_Click"
+                                    IsEnabled="False">
+                                <StackPanel Height="25" Orientation="Horizontal">
+                                    <Label Content="تشخیص" />
+                                    <Image Source="/FacialExpressionRecognitionMachine;component/Icons/unknown.png" />
+                                </StackPanel>
+                            </Button>
+                            <Label Width="45" />
+
+                            <Button Name="NextBtn"
+                                    Width="100"
+                                    Height="30"
+                                    BorderBrush="Red"
+                                    BorderThickness="110"
+                                    Click="NextBtn_Click"
+                                    IsEnabled="False">
+                                <StackPanel Height="25" Orientation="Horizontal">
+                                    <Label Content="عملیات بعد" />
+                                    <Image Source="/FacialExpressionRecognitionMachine;component/Icons/user-arrow-left-icon.png" />
+                                </StackPanel>
+                            </Button>
+
+                        </StackPanel>
+                        <StackPanel Height="100"
+                                    FlowDirection="RightToLeft"
+                                    Orientation="Horizontal">
+                            <Label Width="35" />
+                            <RichTextBox Name="richTextBox1"
+                                         Width="100"
+                                          >
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run>مرحله   1   -جستجوی</Run>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run>تصویر</Run>
+                                    </Paragraph>
+
+                                </FlowDocument>
+
+                            </RichTextBox>
+                            <Label Width="45" />
+                            <RichTextBox Name="richTextBox2"
+                                         Width="100"
+                                          >
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run>مرحله  2-ویرایش</Run>
+
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run>تصویر انتخاب شده</Run>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                            <Label Width="45" />
+                            <RichTextBox Name="richTextBox3"
+                                         Width="106"
+                                          >
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run>مرحله3-پیش پردازش</Run>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run>برای تشخیص چهره</Run>
+                                    </Paragraph>
+
+                                </FlowDocument>
+
+                            </RichTextBox>
+                            <Label Width="45" />
+                            <RichTextBox Name="richTextBox4"
+                                         Width="100"
+                                          >
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run>مرحله  4-تشخیص</Run>
+
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run>سر در تصویر</Run>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                            <Label Width="45" />
+                            <RichTextBox Name="richTextBo0x3"
+                                         Width="99"
+                                          >
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run>مرحله5- عملیات</Run>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run>نهایی برای تشخیص</Run>
+                                    </Paragraph>
+
+                                </FlowDocument>
+
+                            </RichTextBox>
+                            <Label Width="45" />
+
+                            <RichTextBox Name="richTextBox5" Width="100">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run>مرحله  2-ویرایش</Run>
+
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run>تصویر انتخاب شده</Run>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                            <Label Width="45" />
+                            <RichTextBox Name="richTextBox23" Width="99">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run>مرحله 5-عملیات بر</Run>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run>روی چهره</Run>
+                                    </Paragraph>
+
+                                </FlowDocument>
+
+                            </RichTextBox>
+
+                        </StackPanel>
+                    </StackPanel>
+               
+    </Grid>
+            </Border>
+        </Border>
+    </Border>
+
+</Window>
